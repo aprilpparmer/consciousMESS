@@ -2,11 +2,12 @@
 
 <p>
   <strong>Username:</strong>
-  <% if @ripple.username_url %>
-    <td><%= link_to @ripple.username, @ripple.username_url %></td>
-  <% else %>
-    <td><%= @ripple.username %>
-  <% end %>
+  <%= @ripple.username %>
+</p>
+
+<p>
+  <strong>Username url:</strong>
+  <%= @ripple.username_url %>
 </p>
 
 <p>

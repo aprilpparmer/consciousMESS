@@ -13,12 +13,8 @@
   <tbody>
     <% @ripples.each do |ripple| %>
       <tr>
-        <% if ripple.username_url %>
-          <td><%= link_to ripple.username, ripple.username_url %></td>
-        <% else %>
-          <td><%= ripple.username %>
-        <% end %>
-        <!--<td><%= ripple.username_url %></td>-->
+        <td><%= ripple.username %></td>
+        <td><%= ripple.username_url %></td>
         <td><%= ripple.message %></td>
         <td><%= link_to 'Show', ripple %></td>
         <td><%= link_to 'Edit', edit_ripple_path(ripple) %></td>
