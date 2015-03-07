@@ -6,7 +6,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class='<%= controller.controller_name %>'>
+  <div id="banner">
+    <h1>CONSCIOUS/mess</h1>
+    <h2>...a stream of anonymous online ramblings</h2>
+  </div>
 
 <%= yield %>
 
