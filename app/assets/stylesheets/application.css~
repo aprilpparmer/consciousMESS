@@ -18,6 +18,11 @@
   background: #e0f8f8;
   padding: 10px;
   border-bottom: 1px solid;
+}
+
+.bannerMargin {
+  margin-left: 5cm;
+}
   
 }
 

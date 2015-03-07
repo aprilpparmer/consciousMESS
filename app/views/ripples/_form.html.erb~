@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :message %><br>
-    <%= f.text_area :message, :size=>"100x20" %>
+    <%= f.text_area(size: 100x20) :message %>
   </div>
   <div class="actions">
     <%= f.submit %>

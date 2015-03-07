@@ -1,17 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Username:</strong>
-  <%= @ripple.username %>
-</p>
+<h2>
+  <% if @ripple.username_url %>
+    <td><%= link_to @ripple.username, @ripple.username_url %> said...</td>
+  <% else %>
+    <td><%= @ripple.username %> said...</td>
+  <% end %>
+</h2>
 
 <p>
-  <strong>Username url:</strong>
-  <%= @ripple.username_url %>
-</p>
-
-<p>
-  <strong>Message:</strong>
   <%= @ripple.message %>
 </p>
 

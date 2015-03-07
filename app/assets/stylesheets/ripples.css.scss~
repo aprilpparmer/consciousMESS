@@ -8,6 +8,19 @@
   }
  
   .list_line_odd {
-    background: #f8b0f8;
+    background: #f8e0e0;
   }
+
+  .username_format {
+    margin-left: 2cm;
+    font-size: 20pt;
+  }
+  .message_format {
+    margin-left: 2cm;
+    margin-right: 2cm;
+    padding: 5px;
+    font-size: 16pt;
+    border: 1px dashed black;
+}
+
 }
