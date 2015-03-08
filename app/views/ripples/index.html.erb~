@@ -9,7 +9,7 @@
   </thead>
 
   <tbody>
-    <% @ripples.order(created_at: :asc).each do |ripple| %> 
+    <% @ripples.order(created_at: :desc).each do |ripple| %> 
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <% if ripple.username_url %>
           <td><%= link_to ripple.username, ripple.username_url %></td>

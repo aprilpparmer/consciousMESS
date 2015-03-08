@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2>
+<h2 class="username_format">
   <% if @ripple.username_url %>
     <td><%= link_to @ripple.username, @ripple.username_url %> said...</td>
   <% else %>
@@ -8,9 +8,8 @@
   <% end %>
 </h2>
 
-<p>
+<p class="message_format">
   <%= @ripple.message %>
 </p>
 
-<%= link_to 'Edit', edit_ripple_path(@ripple) %> |
 <%= link_to 'Back', ripples_path %>
