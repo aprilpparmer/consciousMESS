@@ -4,7 +4,67 @@ class RipplesController < ApplicationController
   # GET /ripples
   # GET /ripples.json
   def index
-    @ripples = Ripple.all
+    session[:page] ||= 0 
+    @ripples = Ripple.order(created_at: :desc)
+    first_displayed_record = session[:page] * 10
+    last_displayed_record = first_displayed_record + 9
+    total_pages = @ripples.count % 10
+
+    @ripples = @ripples[first_displayed_record..last_displayed_record]
+  end
+
+  def next10
+    total_ripples = Ripple.all.count
+      if ((total_ripples % 10) == 0)
+     	 total_pages = total_ripples / 10
+    else
+        total_pages = total_ripples / 10 + 1
+    end
+    if session[:page] < total_pages - 1
+      session[:page] += 1
+      respond_to do |format|
+        format.html { redirect_to ripples_url }
+        format.json { head :no_content }
+      end
+    else
+      self.oldest
+    end
+  end
+
+  def previous10
+    if session[:page] > 0
+      session[:page] -= 1
+      respond_to do |format|
+        format.html { redirect_to ripples_url }
+        format.json { head :no_content }
+      end
+    else
+      self.newest
+    end
+  end
+
+  def oldest
+    total_ripples = Ripple.all.count
+    if ((total_ripples % 10) == 0)
+      total_pages = (total_ripples / 10) 
+    else
+      total_pages = total_ripples / 10 + 1
+    end
+    session[:page] = total_pages - 1
+    Ripple.order(created_at: :asc)
+    respond_to do |format|
+      format.html { redirect_to ripples_url }
+      format.json { head :no_content }
+    end	
+  end
+
+  def newest
+    session[:page] = 0
+    Ripple.order(created_at: :desc)
+    respond_to do |format|
+      format.html { redirect_to ripples_url }
+      format.json { head :no_content }
+    end	
   end
 
   # GET /ripples/1

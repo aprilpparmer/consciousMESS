@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :ripples
 
-  root "ripples/index"
+
+  root "ripples#index"
+
+  get '/ripples/next10', to: 'ripples#next10'
+
+  resources :ripples
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

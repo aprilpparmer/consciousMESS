@@ -9,7 +9,7 @@
   </thead>
 
   <tbody>
-    <% @ripples.order(created_at: :desc).each do |ripple| %> 
+    <% @ripples.each do |ripple| %> 
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <% if ripple.username_url %>
           <td><%= link_to ripple.username, ripple.username_url %></td>
@@ -26,8 +26,16 @@
 
 <br>
 
-<%= link_to 'Next10', ripples_path %>
-
-<br>
-
+<% if session[:page] == 0 %>
+  Newest|Previous 10 Ripples|
+<% else %>
+  <%= link_to 'Newest', '/ripples/newest' %>| 
+  <%= link_to 'Previous 10 Ripples', '/ripples/previous10' %>|
+<% end %>
+<% if session[:page] >= Ripple.all.count/10 %>
+  Next 10 Ripples|Oldest|
+<% else %>
+  <%= link_to 'Next 10 Ripples', '/ripples/next10' %>| 
+  <%= link_to 'Oldest', '/ripples/oldest' %>|
+<% end %>
 <%= link_to 'New Ripple', new_ripple_path %>

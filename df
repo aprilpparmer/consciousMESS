@@ -1,0 +1,47 @@
+[33mcommit f21b95d6f1ed21c096dc62efb539666fa3c3c439[m
+Author: aparmer1 <aparmer1@my.westga.edu>
+Date:   Sun Mar 8 08:41:34 2015 -0700
+
+    Users can not edit or delete existing messages.
+
+[33mcommit 611316f6a3460018eddbc2bbcdb553e72b1f38a5[m
+Author: aparmer1 <aparmer1@my.westga.edu>
+Date:   Sat Mar 7 13:07:21 2015 -0800
+
+    Ordered ripples from newest to oldest
+
+[33mcommit 18658fa27378ef39320d8137b33ed15661ff4cb7[m
+Author: aparmer1 <aparmer1@my.westga.edu>
+Date:   Sat Mar 7 12:45:18 2015 -0800
+
+    Edited the show page to display css.
+
+[33mcommit 811cdbfefc0c22db3fc0546ad0e40a75d311c20b[m
+Author: aparmer1 <aparmer1@my.westga.edu>
+Date:   Sat Mar 7 07:59:42 2015 -0800
+
+    Added stylesheets and controllers. Edited the config/routes.rb file to direct to List Ripples page
+
+[33mcommit 9f4262c2cfd6b6e76df4c168d0b752ee85bd660e[m
+Author: aparmer1 <aparmer1@my.westga.edu>
+Date:   Sat Mar 7 07:58:29 2015 -0800
+
+    Rows alternate color
+
+[33mcommit eb65c921a187ef800a6f3949f3b9f53748ed5aa5[m
+Author: aparmer1 <aparmer1@my.westga.edu>
+Date:   Sun Mar 1 12:46:36 2015 -0800
+
+    List and Show pages use hyperlink on username if url is provided for the ripple.
+
+[33mcommit e0f6d669b7e1e0d81b3e1719537a483400db662c[m
+Author: aparmer1 <aparmer1@my.westga.edu>
+Date:   Sun Mar 1 11:32:15 2015 -0800
+
+    Generated scaffold"
+
+[33mcommit deb79efa7dbdb5baf475fa56b7cb3ed2d0e5333b[m
+Author: aparmer1 <aparmer1@my.westga.edu>
+Date:   Sun Mar 1 11:25:15 2015 -0800
+
+    Initial Commit
