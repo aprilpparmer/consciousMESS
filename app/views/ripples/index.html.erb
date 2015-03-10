@@ -11,10 +11,10 @@
   <tbody>
     <% @ripples.each do |ripple| %> 
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-        <% if ripple.username_url %>
-          <td><%= link_to ripple.username, ripple.username_url %></td>
+        <% if ripple.username_url == "" %>
+          <td><%= ripple.username %></td>
         <% else %>
-          <td><%= ripple.username %>
+          <td><%= link_to ripple.username, ripple.username_url %></td>
         <% end %>
         <td><%= ripple.message %></td>
 	<td><%= ripple.created_at %></td>

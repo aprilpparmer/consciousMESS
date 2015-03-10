@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h2 class="username_format">
-  <% if @ripple.username_url %>
-    <td><%= link_to @ripple.username, @ripple.username_url %> said...</td>
-  <% else %>
+  <% if @ripple.username_url == "" %> 
     <td><%= @ripple.username %> said...</td>
+  <% else %>
+    <td><%= link_to @ripple.username, @ripple.username_url %> said...</td>
+  <% end %>
   <% end %>
 </h2>
 
